@@ -1,0 +1,10 @@
+
+
+<div class = "row">
+	<% @restaurants.each do |r| %>
+		<div class = "span9">
+			<h3><%= link_to r.name, restaurant_path(r) %></h3>
+			<p><%= r.description %></p>
+		</div>
+	<% end %>
+</div>
