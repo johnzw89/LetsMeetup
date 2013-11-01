@@ -9,13 +9,7 @@ gem 'carrierwave'
 gem "rmagick"
 gem 'jquery-rails'
 
-group :development do
-	gem 'rspec-rails', '~> 2.0'
-	gem 'dotenv-rails'
-	gem 'mysql2'
-end
-
-group :test do
+group :development, :test do
 	gem 'rspec-rails', '~> 2.0'
 	gem 'dotenv-rails'
 	gem 'mysql2'
