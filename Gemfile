@@ -13,11 +13,13 @@ group :development, :test do
 	gem 'rspec-rails', '~> 2.0'
 	gem 'dotenv-rails'
 	gem 'mysql2'
+  gem "better_errors"
 end
 
 group  :production do
 	gem 'rails_12factor'
 	gem 'pg'
+  gem "fog", "~> 1.3.1"
 end
 
 # Gems used only for assets and not required
