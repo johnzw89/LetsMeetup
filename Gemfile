@@ -5,7 +5,6 @@ gem 'rails', '3.2.13'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'pg'
 gem 'carrierwave'
 gem "rmagick"
 gem 'jquery-rails'
@@ -19,7 +18,7 @@ end
 group :test do
 	gem 'rspec-rails', '~> 2.0'
 	gem 'dotenv-rails'
-	gem 'pg'
+	gem 'mysql2'
 end
 
 group  :production do
