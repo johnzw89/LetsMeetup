@@ -5,5 +5,6 @@
 	<div><%= f.text_area :description, size: "16x12", placeholder: "Restaurant description" %></div>
 	<div><%= f.text_field :address, placeholder: "Address" %></div>
 	<div><%= f.text_field :phone_number, placeholder: "Phone number" %></div>
-	<%= f.submit "Submit", class: "btn btn-primary" %>
+	<div><%= f.file_field :photo %></div>
+		<%= f.submit "Submit", class: "btn btn-primary" %>
 <% end %>

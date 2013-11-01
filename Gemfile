@@ -6,11 +6,26 @@ gem 'rails', '3.2.13'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
+gem 'carrierwave'
+gem "rmagick"
+gem 'jquery-rails'
 
-group :development, :test do
-  gem 'rspec-rails', '~> 2.0'
+group :development do
+	gem 'rspec-rails', '~> 2.0'
+	gem 'dotenv-rails'
+	gem 'mysql2'
 end
 
+group :test do
+	gem 'rspec-rails', '~> 2.0'
+	gem 'dotenv-rails'
+	gem 'pg'
+end
+
+group  :production do
+	gem 'rails_12factor'
+	gem 'pg'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -26,10 +41,6 @@ group :assets do
   gem "therubyracer"
   gem "less-rails"
 end
-
-gem 'jquery-rails'
-
-gem 'rails_12factor', group: :production
 
 
 # To use ActiveModel has_secure_password

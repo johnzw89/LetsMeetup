@@ -1,9 +1,8 @@
-
-
 <div class = "row">
 	<% @restaurants.each do |r| %>
 		<div class = "span9">
 			<h3><%= link_to r.name, restaurant_path(r) %></h3>
+			<%= image_tag r.photo_url(:thumb).to_s %>
 			<p><%= r.description %></p>
 		</div>
 	<% end %>
