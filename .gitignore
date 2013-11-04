@@ -16,3 +16,4 @@
 
 # Do not share credential info
 /.env
+/public/*uploads
