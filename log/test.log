@@ -196,3 +196,84 @@ Connecting to database specified by database.yml
   [1m[36mSQL (3.1ms)[0m  [1mINSERT INTO `restaurants` (`apt`, `city`, `created_at`, `description`, `name`, `phone_number`, `photo`, `state`, `street`, `updated_at`, `zip_code`) VALUES (NULL, NULL, '2013-11-05 21:02:01', NULL, 'Leif Howell', 0, NULL, NULL, NULL, '2013-11-05 21:02:01', NULL)[0m
   [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
   [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+Mysql2::Error: Table 'reservester_test.restaurants' doesn't exist: SHOW FULL FIELDS FROM `restaurants`
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Mysql2::Error: Table 'reservester_test.restaurants' doesn't exist: SHOW FULL FIELDS FROM `restaurants`
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Mysql2::Error: Table 'reservester_test.restaurants' doesn't exist: SHOW FULL FIELDS FROM `restaurants`
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Mysql2::Error: Table 'reservester_test.restaurants' doesn't exist: SHOW FULL FIELDS FROM `restaurants`
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Mysql2::Error: Table 'reservester_test.restaurants' doesn't exist: SHOW FULL FIELDS FROM `restaurants`
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Mysql2::Error: Table 'reservester_test.restaurants' doesn't exist: SHOW FULL FIELDS FROM `restaurants`
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Mysql2::Error: Table 'reservester_test.restaurants' doesn't exist: SHOW FULL FIELDS FROM `restaurants`
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Mysql2::Error: Table 'reservester_test.restaurants' doesn't exist: SHOW FULL FIELDS FROM `restaurants`
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Mysql2::Error: Table 'reservester_test.restaurants' doesn't exist: SHOW FULL FIELDS FROM `restaurants`
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Mysql2::Error: Table 'reservester_test.restaurants' doesn't exist: SHOW FULL FIELDS FROM `restaurants`
+  [1m[35m (0.1ms)[0m  ROLLBACK
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (3.9ms)[0m  [1mINSERT INTO `restaurants` (`apt`, `city`, `created_at`, `description`, `name`, `phone_number`, `photo`, `state`, `street`, `updated_at`, `zip_code`) VALUES ('12', 'new York', '2013-11-05 23:52:06', NULL, 'Hermann McDermott', 1234567890, NULL, 'ny', 'One Liberty Plaza', '2013-11-05 23:52:06', '10003')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `restaurants` (`apt`, `city`, `created_at`, `description`, `name`, `phone_number`, `photo`, `state`, `street`, `updated_at`, `zip_code`) VALUES ('12', 'new York', '2013-11-05 23:52:06', NULL, 'Lyric Jacobson', 1234567890, NULL, 'ny', 'One Liberty Plaza', '2013-11-05 23:52:06', '10003')
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `restaurants` (`apt`, `city`, `created_at`, `description`, `name`, `phone_number`, `photo`, `state`, `street`, `updated_at`, `zip_code`) VALUES (NULL, NULL, '2013-11-05 23:52:06', NULL, 'Ignacio Yost V', 1, NULL, NULL, NULL, '2013-11-05 23:52:06', NULL)[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (3.8ms)[0m  [1mINSERT INTO `restaurants` (`apt`, `city`, `created_at`, `description`, `name`, `phone_number`, `photo`, `state`, `street`, `updated_at`, `zip_code`) VALUES ('12', 'new York', '2013-11-05 23:52:31', NULL, 'Stone Kuvalis', 1234567890, NULL, 'ny', 'One Liberty Plaza', '2013-11-05 23:52:31', '10003')[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `restaurants` (`apt`, `city`, `created_at`, `description`, `name`, `phone_number`, `photo`, `state`, `street`, `updated_at`, `zip_code`) VALUES (NULL, NULL, '2013-11-05 23:52:31', NULL, 'Layla Brown', 1, NULL, NULL, NULL, '2013-11-05 23:52:31', NULL)
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `restaurants` (`apt`, `city`, `created_at`, `description`, `name`, `phone_number`, `photo`, `state`, `street`, `updated_at`, `zip_code`) VALUES ('12', 'new York', '2013-11-05 23:52:31', NULL, 'Rosa Mante Sr.', 1234567890, NULL, 'ny', 'One Liberty Plaza', '2013-11-05 23:52:31', '10003')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m

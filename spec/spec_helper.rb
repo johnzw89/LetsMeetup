@@ -35,10 +35,6 @@ RSpec.configure do |config|
   # the seed, which is printed after each run.
   #     --seed 1234
   config.order = "random"
-<<<<<<< HEAD
-
   require "capybara/rspec"
   require "factory_girl_rails"
-=======
->>>>>>> 2e4c54f40810002af925136e73ceaabdece2e726
 end
