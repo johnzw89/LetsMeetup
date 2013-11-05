@@ -1,0 +1,16 @@
+<%= image_tag @restaurant.photo_url(:mast_head).to_s %>
+<h1><%= @restaurant.name %></h1>
+<strong>Description: </strong>
+<p><%= @restaurant.description %></p>
+<strong>Address: </strong>
+<p><%= @restaurant.address %></p>
+<strong>Phone Number: </strong>
+<p><%=@restaurant.phone_number %></p>
+<%= image_tag(@map_url) %>
+
+<div>
+	<%= link_to "Edit", edit_restaurant_path(@restaurant), class: "btn btn-primary" %>
+	<%= link_to "Delete", restaurant_path(@restaurant), class: "btn btn-danger",
+						method: :delete, data: { confirm: "Are you sure?" }
+	%>
+</div>

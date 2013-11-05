@@ -1,0 +1,18 @@
+
+
+<%= form_for @restaurant do |f| %>
+	<div><%= f.text_field :name, placeholder: "Restaurant name" %></div>
+	<div><%= f.text_area :description, size: "16x12", placeholder: "Restaurant description" %></div>
+	<div>
+		<%= f.text_field :street, placeholder: "street" %>
+		<%= f.text_field :city, placeholder: "city" %>
+		<%= f.text_field :apt, placeholder: "apt/suite" %>
+	</div>
+	<div>
+		<%= f.text_field :state, placeholder: "state" %>
+		<%= f.text_field :zip_code, placeholder: "zipcode" %>
+	</div>
+	<div><%= f.text_field :phone_number, placeholder: "Phone number" %></div>
+	<div><%= f.file_field :photo %></div>
+		<%= f.submit "Submit", class: "btn btn-primary" %>
+<% end %>

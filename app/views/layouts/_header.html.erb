@@ -1,0 +1,20 @@
+
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <a class="brand" href= <%= restaurants_path %>>Reservester</a>
+    <ul class="nav">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Link</a></li>
+      <li><a href="#">Link</a></li>
+    </ul>
+    <ul class="nav pull-right">
+      <li>
+      	<% if owner_signed_in? %>
+      		<%= link_to "Sign Out", destroy_owner_session_path, method: :delete, class: "float-right" %>
+      	<% else %>
+      		<%= link_to "Sign In", new_owner_session_path, class: "float-right" %>
+      	<% end %>
+      </li>
+    </ul>
+  </div>
+</div>
