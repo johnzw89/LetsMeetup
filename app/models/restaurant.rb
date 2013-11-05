@@ -7,6 +7,4 @@ class Restaurant < ActiveRecord::Base
 
   def address
   	[street, apt, city, state, zip_code].join(', ')
-  end
-
 end

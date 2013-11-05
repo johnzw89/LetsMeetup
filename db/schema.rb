@@ -11,6 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(:version => 20131105205053) do
 
   create_table "owners", :force => true do |t|
@@ -31,19 +32,29 @@ ActiveRecord::Schema.define(:version => 20131105205053) do
 
   add_index "owners", ["email"], :name => "index_owners_on_email", :unique => true
   add_index "owners", ["reset_password_token"], :name => "index_owners_on_reset_password_token", :unique => true
+=======
+ActiveRecord::Schema.define(:version => 20131030212542) do
+>>>>>>> 2e4c54f40810002af925136e73ceaabdece2e726
 
   create_table "restaurants", :force => true do |t|
     t.string   "name"
     t.string   "description"
+<<<<<<< HEAD
+=======
+    t.string   "address"
+>>>>>>> 2e4c54f40810002af925136e73ceaabdece2e726
     t.integer  "phone_number"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
     t.string   "photo"
+<<<<<<< HEAD
     t.string   "street"
     t.string   "apt"
     t.string   "city"
     t.string   "state"
     t.string   "zip_code"
+=======
+>>>>>>> 2e4c54f40810002af925136e73ceaabdece2e726
   end
 
 end
