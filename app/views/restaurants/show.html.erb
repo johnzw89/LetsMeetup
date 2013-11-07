@@ -8,9 +8,11 @@
 <p><%=@restaurant.phone_number %></p>
 <%= image_tag(@map_url) %>
 
-<div>
-	<%= link_to "Edit", edit_restaurant_path(@restaurant), class: "btn btn-primary" %>
-	<%= link_to "Delete", restaurant_path(@restaurant), class: "btn btn-danger",
-						method: :delete, data: { confirm: "Are you sure?" }
-	%>
-</div>
+<% if owner_signed_in? %>
+	<div>
+		<%= link_to "Edit", edit_restaurant_path(@restaurant), class: "btn btn-primary" %>
+		<%= link_to "Delete", restaurant_path(@restaurant), class: "btn btn-danger",
+							method: :delete, data: { confirm: "Are you sure?" }
+		%>
+	</div>
+<% end %>

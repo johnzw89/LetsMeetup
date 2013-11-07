@@ -1,4 +1,5 @@
 class RestaurantsController < ApplicationController
+	before_filter :authenticate_owner!, except: [:index, :show]
 
 	def index
 		@restaurant = Restaurant.all
@@ -11,10 +12,12 @@ class RestaurantsController < ApplicationController
 	end
 
 	def new
-		@restaurant = Restaurant.new
+		@owner = current_owner
+		@restaurant = current_owner.restaurants.new
 	end
 
 	def create
+		@owner = current_owner
 		@restaurant = current_owner.restaurants.new(params[:restaurant])
 		#how does it know :restaurant exists. where did it come from?
 		#rails has a convention to name :restaurant to match the model Restaurant.  I also have named it :restaurant.
@@ -24,16 +27,19 @@ class RestaurantsController < ApplicationController
 	end
 
 	def edit
+		@owner = current_owner
 		@restaurant = Restaurant.find(params[:id])
 	end
 
 	def update
+		@owner = current_owner
 		@restaurant = current_owner.restaurants.find(params[:id])
 		@restaurant.update_attributes(params[:restaurant])
 		redirect_to @restaurant
 	end
 
 	def destroy
+		@owner = current_owner
 		@restaurant = Restaurant.find(params[:id])
 		@restaurant.destroy
 		redirect_to restaurants_path
