@@ -1,6 +1,6 @@
 
 
-<%= form_for @restaurant do |f| %>
+<%= form_for ([@owner, @restaurant]) do |f| %>
 	<div><%= f.text_field :name, placeholder: "Restaurant name" %></div>
 	<div><%= f.text_area :description, size: "16x12", placeholder: "Restaurant description" %></div>
 	<div>

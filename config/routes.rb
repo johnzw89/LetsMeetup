@@ -4,7 +4,10 @@ Reservester::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
   
-  resources :restaurants
+  resources :owners, shallow: true do
+    resources :restaurants
+  end
+
   root :to => 'restaurants#index'
 
   # Sample of regular route:

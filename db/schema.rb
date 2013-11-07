@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131105205053) do
+ActiveRecord::Schema.define(:version => 20131107174516) do
 
   create_table "owners", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -34,8 +34,8 @@ ActiveRecord::Schema.define(:version => 20131105205053) do
 
   create_table "restaurants", :force => true do |t|
     t.string   "name"
-    t.string   "description"
-    t.integer  "phone_number"
+    t.text     "description"
+    t.string   "phone_number"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
     t.string   "photo"
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(:version => 20131105205053) do
     t.string   "city"
     t.string   "state"
     t.string   "zip_code"
+    t.integer  "owner_id"
   end
 
 end

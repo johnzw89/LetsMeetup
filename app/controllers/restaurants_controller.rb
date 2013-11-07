@@ -1,7 +1,7 @@
 class RestaurantsController < ApplicationController
 
 	def index
-		@asdf = Restaurant.all
+		@restaurant = Restaurant.all
 	end
 
 	def show
@@ -15,7 +15,7 @@ class RestaurantsController < ApplicationController
 	end
 
 	def create
-		@restaurant = Restaurant.new(params[:restaurant])
+		@restaurant = current_owner.restaurants.new(params[:restaurant])
 		#how does it know :restaurant exists. where did it come from?
 		#rails has a convention to name :restaurant to match the model Restaurant.  I also have named it :restaurant.
 		#how would I rename it, if I wanted to call it something else?
@@ -28,7 +28,7 @@ class RestaurantsController < ApplicationController
 	end
 
 	def update
-		@restaurant = Restaurant.find(params[:id])
+		@restaurant = current_owner.restaurants.find(params[:id])
 		@restaurant.update_attributes(params[:restaurant])
 		redirect_to @restaurant
 	end

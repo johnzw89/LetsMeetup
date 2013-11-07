@@ -277,3 +277,25 @@ Connecting to database specified by database.yml
   [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `restaurants` (`apt`, `city`, `created_at`, `description`, `name`, `phone_number`, `photo`, `state`, `street`, `updated_at`, `zip_code`) VALUES ('12', 'new York', '2013-11-05 23:52:31', NULL, 'Rosa Mante Sr.', 1234567890, NULL, 'ny', 'One Liberty Plaza', '2013-11-05 23:52:31', '10003')[0m
   [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
   [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (5.4ms)[0m  [1mINSERT INTO `restaurants` (`apt`, `city`, `created_at`, `description`, `name`, `phone_number`, `photo`, `state`, `street`, `updated_at`, `zip_code`) VALUES ('12', 'new York', '2013-11-06 23:46:33', NULL, 'Cedrick Emard', 1234567890, NULL, 'ny', 'One Liberty Plaza', '2013-11-06 23:46:33', '10003')[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (1.8ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO `restaurants` (`apt`, `city`, `created_at`, `description`, `name`, `phone_number`, `photo`, `state`, `street`, `updated_at`, `zip_code`) VALUES ('12', 'new York', '2013-11-06 23:46:33', NULL, 'Mallie Fritsch III', 1234567890, NULL, 'ny', 'One Liberty Plaza', '2013-11-06 23:46:33', '10003')
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (12.0ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO `restaurants` (`apt`, `city`, `created_at`, `description`, `name`, `phone_number`, `photo`, `state`, `street`, `updated_at`, `zip_code`) VALUES (NULL, NULL, '2013-11-06 23:46:33', NULL, 'Zack Kilback', 327, NULL, NULL, NULL, '2013-11-06 23:46:33', NULL)[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
