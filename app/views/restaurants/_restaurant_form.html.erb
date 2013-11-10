@@ -1,6 +1,7 @@
+<%= form_for [@owner, @restaurant] do |f| %>
 
+	<%= render "error_messages", target: @restaurant %>
 
-<%= form_for ([@owner, @restaurant]) do |f| %>
 	<div><%= f.text_field :name, placeholder: "Restaurant name" %></div>
 	<div><%= f.text_area :description, size: "16x12", placeholder: "Restaurant description" %></div>
 	<div>
@@ -14,5 +15,5 @@
 	</div>
 	<div><%= f.text_field :phone_number, placeholder: "Phone number" %></div>
 	<div><%= f.file_field :photo %></div>
-		<%= f.submit "Submit", class: "btn btn-primary" %>
+	<%= f.submit "Submit", class: "btn btn-primary" %>
 <% end %>

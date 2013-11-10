@@ -9,6 +9,7 @@ gem 'carrierwave'
 gem "rmagick"
 gem 'jquery-rails'
 gem 'devise'
+gem 'debugger'
 
 group :development, :test do
 	gem 'rspec-rails', '~> 2.0'
@@ -18,6 +19,7 @@ group :development, :test do
 	gem 'dotenv-rails'
 	gem 'mysql2'
   gem "better_errors"
+  gem "binding_of_caller"
 end
 
 group  :production do
@@ -36,11 +38,12 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
-  gem 'twitter-bootstrap-rails'
-  gem "therubyracer"
-  gem "less-rails"
 end
 
+gem 'twitter-bootstrap-rails'
+gem "therubyracer"
+gem "less-rails"
+gem "parsley-rails"
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

@@ -3,14 +3,30 @@
   <div class="navbar-inner">
     <a class="brand" href= <%= root_path %>>Reservester</a>
     <ul class="nav">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Link</a></li>
-      <li><a href="#">Link</a></li>
+      <li><%= link_to "Home", root_path %></li>
+      <li><%= link_to "Owners", owners_path %></li>
+      <li><%= link_to "About", "#" %></li>
     </ul>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+            <li><a tabindex="-1" href="#">Regular link</a></li>
+            <li class="disabled"><a tabindex="-1" href="#">Disabled link</a></li>
+            <li><a tabindex="-1" href="#">Another link</a></li>
+          </ul>
+
     <ul class="nav pull-right">
+      
+
       <li>
       	<% if owner_signed_in? %>
-      		<%= link_to "Sign Out", destroy_owner_session_path, method: :delete, class: "float-right" %>
+      		
+          
+
+
+
+
+
+
+          <%= link_to "Sign Out", destroy_owner_session_path, method: :delete, class: "float-right" %>
       	<% else %>
       		<%= link_to "Sign In", new_owner_session_path, class: "float-right" %>
       	<% end %>

@@ -4,6 +4,8 @@ class Restaurant < ActiveRecord::Base
   
   validates :name, presence: true
   validates :phone_number, presence: true
+ # validates :photo, presence: true
+  validates :photo, presence: true
 
   belongs_to :owner
 

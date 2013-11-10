@@ -1,6 +1,7 @@
 
 
 <%= render "restaurants/restaurant" %>
+
 <% if owner_signed_in? %>
 	<%= link_to "New Restaurant", new_owner_restaurant_path(current_owner), class: "btn btn-primary" %>
 <% end %>

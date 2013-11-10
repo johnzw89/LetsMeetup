@@ -1,9 +1,11 @@
-<div class = "row">
-	<% @restaurant.each do |r| %>
-		<div class = "span9">
-			<h3><%= link_to r.name, restaurant_path(r) %></h3>
-			<%= image_tag r.photo_url(:thumb).to_s %>
+<% @restaurant.each do |r| %>
+	<div class = "restaurant-box">
+		<h3 class = "restaurant-name"><%= link_to r.name, restaurant_path(r) %></h3>
+		<div class= "restaurant-photo">
+			<%= image_tag r.photo_url(:thumb).to_s, class: "image-thumb" %>
+		</div>
+		<div class = "restaurant-description">
 			<p><%= r.description %></p>
 		</div>
-	<% end %>
-</div>
+	</div>
+<% end %>

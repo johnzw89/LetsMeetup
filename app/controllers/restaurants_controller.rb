@@ -23,11 +23,19 @@ class RestaurantsController < ApplicationController
 		#rails has a convention to name :restaurant to match the model Restaurant.  I also have named it :restaurant.
 		#how would I rename it, if I wanted to call it something else?
 		@restaurant.save
-		redirect_to @restaurant
+
+		respond_to do |format|
+	      if @restaurant.save
+	        format.html { redirect_to @restaurant, notice: 'Restaurant was successfully added!' }
+	        format.json { render json: @restaurant, status: :created, location: @restaurant }
+	      else
+	        format.html { render action: "new" }
+	        format.json { render json: @restaurant.errors, status: :unprocessable_entity }
+	      end
+	    end
 	end
 
 	def edit
-		@owner = current_owner
 		@restaurant = Restaurant.find(params[:id])
 	end
 
@@ -42,7 +50,7 @@ class RestaurantsController < ApplicationController
 		@owner = current_owner
 		@restaurant = Restaurant.find(params[:id])
 		@restaurant.destroy
-		redirect_to restaurants_path
+		redirect_to root_path
 	end
 
 end

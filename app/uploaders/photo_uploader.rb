@@ -34,7 +34,7 @@ class PhotoUploader < CarrierWave::Uploader::Base
 
   # Create different versions of your uploaded files:
   version :thumb do
-    process :resize_to_fill => [300, 250, gravity = ::Magick::CenterGravity]
+    process :resize_to_limit => [250, 180]
   end
 
   version :mast_head do
