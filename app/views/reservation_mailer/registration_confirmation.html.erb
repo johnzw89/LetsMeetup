@@ -1,0 +1,8 @@
+<p>Thanks for reserving a spot at <%= @restaurant.name %>!</p>
+<p>The owner, <%= @restaurant.owner %>, has been notified and is looking forward to your visit.</p>
+<p>Review of your reservation:</p>
+<ul>
+	<li>Date: <%= @reservation.date %></li>
+	<li>Time: <%= @reservation.time %></li>
+</ul>
+<p>Special Instructions: <%= @reservation.message %></p>

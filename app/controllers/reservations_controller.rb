@@ -45,8 +45,8 @@ class ReservationsController < ApplicationController
 
     respond_to do |format|
       if @reservation.save
-        ReservationMailer.registration_confirmation(@reservation).deliver
-        format.html { redirect_to @restaurant, notice: 'Reservation was successfully created.' }
+        ReservationMailer.registration_confirmation(@restaurant ,@reservation).deliver
+        format.html { redirect_to @restaurant, flash: {success: 'Reservation was successfully created.'} }
         format.json { render json: @restaurant, status: :created, location: @restaurant }
       else
         format.html { render action: "new" }
