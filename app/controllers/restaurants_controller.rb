@@ -9,6 +9,9 @@ class RestaurantsController < ApplicationController
 		@restaurant = Restaurant.find(params[:id])
 		@address = @restaurant.address.split(' ').join('+').to_str
 		@map_url = "http://maps.googleapis.com/maps/api/staticmap?&markers=color:blue|#{@address}&zoom=13&size=600x300&sensor=false&key=AIzaSyA0vhNQ5sapyK1I7QE-iKn55eQ3J6rJluo"
+		@reservation = @restaurant.reservations.new
+
+		
 	end
 
 	def new

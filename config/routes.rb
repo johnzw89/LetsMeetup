@@ -1,4 +1,7 @@
 Reservester::Application.routes.draw do
+  resources :reservations
+
+
   devise_for :owners
 
   # The priority is based upon order of creation:
@@ -6,6 +9,10 @@ Reservester::Application.routes.draw do
   
   resources :owners, shallow: true do
     resources :restaurants
+  end
+
+  resources :restaurants do
+    resources :reservations
   end
 
   root :to => 'restaurants#index'

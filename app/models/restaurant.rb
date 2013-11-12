@@ -8,6 +8,7 @@ class Restaurant < ActiveRecord::Base
   validates :photo, presence: true
 
   belongs_to :owner
+  has_many :reservations
 
   def address
   	[street, apt, city, state, zip_code].join(', ')

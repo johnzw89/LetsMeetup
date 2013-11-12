@@ -1,19 +1,30 @@
-<%= image_tag @restaurant.photo_url(:mast_head).to_s %>
-<h1><%= @restaurant.name %></h1>
-<p>The owner is <%= @restaurant.owner.name %></p>
-<strong>Description: </strong>
-<p><%= @restaurant.description %></p>
-<strong>Address: </strong>
-<p><%= @restaurant.address %></p>
-<strong>Phone Number: </strong>
-<p><%=@restaurant.phone_number %></p>
-<%= image_tag(@map_url) %>
-
-<% if current_owner == @restaurant.owner %>
-	<div>
-		<%= link_to "Edit", edit_restaurant_path(@restaurant), class: "btn btn-primary" %>
-		<%= link_to "Delete", restaurant_path(@restaurant), class: "btn btn-danger",
-							method: :delete, data: { confirm: "Are you sure?" }
-		%>
+<div class = "row">
+	<h1><%= @restaurant.name %></h1>
+	<div class = "span6">
+		<%= image_tag @restaurant.photo_url(:mast_head).to_s, class: "image-mast" %>
+		<% if current_owner == @restaurant.owner %>
+			<div>
+				<%= link_to "Edit", edit_restaurant_path(@restaurant), class: "btn btn-primary" %>
+				<%= link_to "Delete", restaurant_path(@restaurant), class: "btn btn-danger",
+									method: :delete, data: { confirm: "Are you sure?" }
+				%>
+			</div>
+		<% end %>
 	</div>
-<% end %>
+	<div class = "span2">
+		<h5>Make a Reservation</h5>
+		<%= render 'reservation_form' %>
+	</div>
+	<div class = "span8">
+		<p>The owner is <%= @restaurant.owner.name.capitalize %></p>
+		<strong>Description: </strong>
+		<p><%= @restaurant.description %></p>
+		<strong>Address: </strong>
+		<p><%= @restaurant.address %></p>
+		<strong>Phone Number: </strong>
+		<p><%=@restaurant.phone_number %></p>
+		<%= image_tag @map_url, class: "image-mast" %>
+	</div>
+
+
+</div>

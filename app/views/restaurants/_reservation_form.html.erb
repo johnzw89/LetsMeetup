@@ -1,0 +1,14 @@
+<%= form_for [@restaurant, @reservation] do |f| %>
+	<%= f.email_field :email, placeholder: "Email so we can contact you" %>
+	<%= f.label :Deservation_Date %>
+	<%= f.date_select :date %>
+
+	<div class = "res-time-field">
+		<%= f.label :Reservation_Time %>
+		<%= f.time_select :time, ampm: true, minute_step: 15 %>
+	</div>
+
+	<%= f.text_field :message, placeholder: "Special instructions" %>
+	<%= f.submit "Reserve a spot!", class: "btn btn-primary" %>
+
+<% end %>
