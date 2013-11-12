@@ -1,7 +1,7 @@
 
 <div class="navbar navbar-fixed-top">
   <div class="navbar-inner">
-    <a class="brand" href= <%= root_path %>>Reservester</a>
+    <a class="brand" href= <%= root_path %>>MeetMe.Here</a>
     <ul class="nav">
       <li><%= link_to "Home", root_path %></li>
       <li><%= link_to "Owners", owners_path %></li>
@@ -18,18 +18,8 @@
           </ul>
 
     <ul class="nav pull-right">
-      
-
       <li>
       	<% if owner_signed_in? %>
-      		
-          
-
-
-
-
-
-
           <%= link_to "Sign Out", destroy_owner_session_path, method: :delete, class: "float-right" %>
       	<% else %>
       		<%= link_to "Sign In", new_owner_session_path, class: "float-right" %>
