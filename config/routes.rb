@@ -1,8 +1,10 @@
 Reservester::Application.routes.draw do
+
+  root :to => 'restaurants#index'
   resources :reservations
-
-
   devise_for :owners
+
+  get 'owners/:id/dashboard', to:'owners#dashboard', as: :dashboard
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -14,8 +16,6 @@ Reservester::Application.routes.draw do
   resources :restaurants do
     resources :reservations
   end
-
-  root :to => 'restaurants#index'
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
