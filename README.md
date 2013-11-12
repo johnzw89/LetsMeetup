@@ -2,4 +2,16 @@ JohnWei_ReservesterF13
 ======================
 This is my project during StartupInstitute.  It is a basic Opentable clone with some extensions.
 
-[Site here](http://boiling-dawn-4861.herokuapp.com/) for the live app.
+[Live site](http://boiling-dawn-4861.herokuapp.com/) for the live app.
+
+Gems and specs:
+
+- Google static maps
+- Carrierwave
+- Devise
+- Client side validation
+- Bootstrap
+- Rspec
+- Actionmailer and Mailcatcher
+- SendGrid
+
