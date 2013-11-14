@@ -2,7 +2,7 @@ JohnWei_ReservesterF13
 ======================
 This is my project during StartupInstitute.  It is a basic Opentable clone with some extensions.
 
-[Live site](http://boiling-dawn-4861.herokuapp.com/) for the live app.
+[Live site](http://meetmehere.herokuapp.com/) for the live app.
 
 Gems and specs:
 
