@@ -2,6 +2,13 @@
 	<h1><%= @restaurant.name %></h1>
 	<div class = "span6">
 		<%= image_tag @restaurant.photo_url(:mast_head).to_s, class: "image-mast" %>
+
+		<div>
+		<% @restaurant.categories.each do |category| %>
+			<span class = "label"><%= category.name %></span>
+		<% end %>
+		</div>
+		<br>
 		<% if current_owner == @restaurant.owner %>
 			<div>
 				<%= link_to "Edit", edit_restaurant_path(@restaurant), class: "btn btn-primary" %>

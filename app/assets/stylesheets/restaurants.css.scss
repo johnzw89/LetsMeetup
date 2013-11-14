@@ -16,11 +16,14 @@ $vintage-red: FF434C;
 //}
 
 
-// restaurant index
+// application layout
 
-.container-fluid {
+.container {
 	width: 950px;
 	margin: auto;
+
+// restaurant index
+
 
 	.restaurant-box {
 		width: 900px;
@@ -81,3 +84,10 @@ $vintage-red: FF434C;
 	border-radius: 5px;
 	padding-bottom: 10px;
 	}
+.category-form-box {
+	padding-bottom: 10px;
+
+	.category-checkbox-label {
+		display: inline;
+	}
+}

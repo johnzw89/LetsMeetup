@@ -3,7 +3,7 @@
 	<%= render "error_messages", target: @restaurant %>
 
 	<div><%= f.text_field :name, placeholder: "Restaurant name" %></div>
-	<div><%= f.text_area :description, size: "16x12", placeholder: "Restaurant description" %></div>
+	<div><%= f.text_area :description, rows: "8", placeholder: "Restaurant description" %></div>
 	<div>
 		<%= f.text_field :street, placeholder: "street" %>
 		<%= f.text_field :city, placeholder: "city" %>
@@ -14,6 +14,21 @@
 		<%= f.text_field :zip_code, placeholder: "zipcode" %>
 	</div>
 	<div><%= f.text_field :phone_number, placeholder: "Phone number" %></div>
-	<div><%= f.file_field :photo %></div>
+	<div><%= f.file_field :photo, "data-pre" => @restaurant.photo %></div>
+	
+	<%= f.label :category_tokens %>
+	<%= f.text_field :category_tokens, placeholder: "Restaurant categories", "data-pre" => @restaurant.categories.map(&:attributes).to_json, html: { id: "restaurant_category_tokens"} %>
+
+<!-- Checkboxes for category tags 	
+
+	<div class = "category-form-box" >
+		<% Category.all.each do |category| %>
+			<%= hidden_field_tag "restaurant[category_ids][]", nil %>
+			<%= check_box_tag "restaurant[category_ids][]", category.id, @restaurant.category_ids.include?(category.id), id: dom_id(category) %>
+			<%= label_tag dom_id(category), category.name, class: "category-checkbox-label" %>
+			<br>
+	   	<% end %>
+	</div> -->
+
 	<%= f.submit "Submit", class: "btn btn-primary" %>
 <% end %>
