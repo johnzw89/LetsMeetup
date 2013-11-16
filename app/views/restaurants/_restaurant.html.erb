@@ -1,11 +1,19 @@
 <% @restaurant.each do |r| %>
 	<div class = "restaurant-box">
-		<h3 class = "restaurant-name"><%= link_to r.name, restaurant_path(r) %></h3>
+		<div class = "restaurant-name-box">
+			<h3 class = "restaurant-name"><%= link_to r.name, restaurant_path(r) %></h3>
+		</div>
 		<div class= "restaurant-photo">
+			<%= link_to r, class: "link-mask" do %>
+				<span></span>
+			<% end %>
 			<%= image_tag r.photo_url(:thumb).to_s, class: "image-thumb" %>
 		</div>
 		<div class = "restaurant-description">
 			<p><%= r.description %></p>
 		</div>
+		<% r.categories.each do |c| %>
+			<span class = "label"><%= c.name %></span>
+		<% end %>
 	</div>
 <% end %>

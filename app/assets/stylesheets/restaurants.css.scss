@@ -6,6 +6,7 @@ $divborder: #30394F;
 $dark-white: #EDE8DF;
 $darker-gray: #B2AFA8;
 $sea-blue: #7FC2DB;
+$sea-blue-shadow: #59ACC4;
 $dark-blue: #30394F;
 $vintage-red: FF434C;
 
@@ -19,20 +20,21 @@ $vintage-red: FF434C;
 // application layout
 
 .container {
-	width: 950px;
+	width: 1024px;
 	margin: auto;
 
 // restaurant index
 
 
 	.restaurant-box {
-		width: 900px;
-		height: 240px;
+		width: 19%;
+		height: 450px;
 		padding: 10px 20px 10px 20px;
-		margin-bottom: 20px;
-		border-width: 5px;
+		margin: 5px;
+		float: left;
+		border-width: 2px;
 		border-color: $dark-blue;
-		border-style: double;
+		border-style: solid;
 		background-color: $dark-white;
 		-moz-box-shadow: 10px 10px 17px $darker-gray;
 		-webkit-box-shadow: 10px 10px 17px $darker-gray;
@@ -41,41 +43,61 @@ $vintage-red: FF434C;
 		border-top-left-radius: 40px;
 		border-bottom-left-radius: 40px;
 		border-bottom-right-radius: 40px;
+		position: relative;
 		
+		.link-mask {
+			position:absolute; 
+  			width:100%;
+  			height:100%;
+  			top:0px;
+  			left: 0px;
+  			z-index: 1;
+		}
+
+		.restaurant-name-box {
+			height: 45px;
+		}
+
 		.restaurant-name {
-			line-height: 30px;
-			margin: 5px;
+			line-height: 20px;
+			font-size: 18px;
+			text-align: center;
 		}
 
 		.restaurant-photo {
-			float: left;
-			width: 250px;
+			margin: auto;
+			width: 100%;
 			height: 180px;
 			line-height: 180px;
 			vertical-align: middle;
 			text-align: center;
+			padding-bottom: 10px;
+			position: relative;
 
 			.image-thumb {
-				border-radius: 5px;
+				border-radius: 40px;
 				width: 250px;
 				height: 180px;
 
 			}
 		}
-
 		.restaurant-description {
 			overflow: scroll;
-			height: 180px;
-			width: 580px;
-			float: right;
+			height: 150px;
+			width: 100%;
+			margin-bottom: 5px;
+			border-style: solid;
+			border-width: 1px;
+			border-color: $darker-gray;
+			padding: 2px;
 		}
-
 	}
 }
 .restaurant-box:hover {
-	-moz-box-shadow: 10px 10px 10px 10px 17px $sea-blue;
-	-webkit-box-shadow: 0px 0px 0px 5px $sea-blue;
-	box-shadow: 10px 10px 10px 10px 17px $sea-blue;
+	border-color: $sea-blue;
+	-moz-box-shadow: 10px 10px 17px $sea-blue-shadow;
+	-webkit-box-shadow: 10px 10px 17px $sea-blue-shadow;
+	box-shadow: 10px 10px 17px $sea-blue-shadow;
 }
 
 // restaurant show page

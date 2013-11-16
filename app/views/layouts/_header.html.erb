@@ -4,6 +4,7 @@
     <a class="brand" href= <%= root_path %>>MeetMe.Here</a>
     <ul class="nav">
       <li><%= link_to "Home", root_path %></li>
+      <li><%= link_to "Categories", categories_path %></li>
       <li><%= link_to "Owners", owners_path %></li>
       <li><%= link_to "About", "#" %></li>
       <% if owner_signed_in? %>
