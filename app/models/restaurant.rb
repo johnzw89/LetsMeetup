@@ -7,6 +7,7 @@ class Restaurant < ActiveRecord::Base
   validates :phone_number, presence: true
   validates :photo, presence: true
 
+
   belongs_to :owner
   has_many :reservations
   has_many :categorizations
@@ -22,4 +23,13 @@ class Restaurant < ActiveRecord::Base
   def address
   	[street, apt, city, state, zip_code].join(', ')
   end
+
+  def self.search(search)
+    if search
+      includes(:categories).where('categories.name LIKE ?', "%#{search}%")
+    else
+      find(:all)
+    end
+  end
+
 end

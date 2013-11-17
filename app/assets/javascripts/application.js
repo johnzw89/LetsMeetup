@@ -18,8 +18,14 @@
 
 
 $(function () {
-  $('#restaurant_category_tokens').tokenInput('/categories.json', { crossDomain: false,
-  	prePopulate: $('#book_author_tokens').data('pre'), preventDuplicates: true,
-  	theme: 'facebook', 
-  });
+	$('#restaurant_category_tokens').tokenInput('/categories.json', { crossDomain: false,
+	prePopulate: $('#book_author_tokens').data('pre'), preventDuplicates: true,
+	theme: 'facebook', 
+	});
+
+	// Search form.
+	$('#restaurant-search').submit(function () {
+		$.get(this.action, $(this).serialize(), null, 'script');
+		return false;
+  	});
 });
