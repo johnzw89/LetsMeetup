@@ -1,5 +1,8 @@
 class Restaurant < ActiveRecord::Base
-  attr_accessible :name, :description, :phone_number, :photo, :street, :apt, :city, :state, :zip_code, :category_ids, :category_tokens
+  attr_accessible :name, :description, :phone_number, :photo,
+                  :street, :apt, :city, :state, :zip_code,
+                  :category_ids, :category_tokens,
+                  :latitude, :logitude
   
   mount_uploader :photo, PhotoUploader
   
@@ -23,6 +26,10 @@ class Restaurant < ActiveRecord::Base
   def address
   	[street, apt, city, state, zip_code].join(', ')
   end
+
+  geocoded_by :address
+  after_validation :geocode
+
 
   def self.search(search)
     if search

@@ -16,8 +16,14 @@
 	<div><%= f.text_field :phone_number, placeholder: "Phone number" %></div>
 	<div><%= f.file_field :photo, "data-pre" => @restaurant.photo %></div>
 	
-	<%= f.label :category_tokens %>
+	<%= f.label :categories %>
 	<%= f.text_field :category_tokens, placeholder: "Restaurant categories", "data-pre" => @restaurant.categories.map(&:attributes).to_json, html: { id: "restaurant_category_tokens"} %>
+	<p>All Categories:</p>
+	<% Category.all.each do |c| %>
+		<span class = "label"><%= c.name %></span>
+	<% end %>
+	<br>
+	<br>
 
 <!-- Checkboxes for category tags 	
 

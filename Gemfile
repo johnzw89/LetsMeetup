@@ -9,7 +9,6 @@ gem 'carrierwave'
 gem "rmagick"
 gem 'jquery-rails'
 gem 'devise'
-gem 'debugger'
 
 group :development, :test do
 	gem 'rspec-rails', '~> 2.0'
@@ -20,6 +19,7 @@ group :development, :test do
 	gem 'mysql2'
   gem "better_errors"
   gem "binding_of_caller"
+  gem 'debugger'
 end
 
 group  :production do
@@ -44,6 +44,8 @@ gem 'twitter-bootstrap-rails'
 gem "therubyracer"
 gem "less-rails"
 gem "parsley-rails"
+gem 'geocoder'
+gem 'gmaps4rails'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

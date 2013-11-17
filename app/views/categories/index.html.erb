@@ -4,18 +4,22 @@
   <tr>
     <th>Name</th>
     <th>Number of Places</th>
-    <th>Actions</th>
+    <% if signed_in? %>
+      <th>Actions</th>
+    <% end %>
   </tr>
 
 <% @categories.each do |category| %>
   <tr>
     <td><span class= "label" ><%= category.name %></span></td>
     <td><%= category.restaurants.count %></td>
-    <td>
-      <%= link_to 'Show', category %>
-      <%= link_to 'Edit', edit_category_path(category) %>
-      <%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %>
-    </td>
+    <% if signed_in? %>
+      <td>
+        <%= link_to 'Show', category %>
+        <%= link_to 'Edit', edit_category_path(category) %>
+        <%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </td>
+    <% end %>
   </tr>
 <% end %>
 </table>

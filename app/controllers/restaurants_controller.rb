@@ -4,13 +4,16 @@ class RestaurantsController < ApplicationController
 	def index
 		# @restaurant = Restaurant.all
 		@restaurant = Restaurant.search(params[:search])
-		
+		@hash = Gmaps4rails.build_markers(Restaurant.all) do |restaurant, marker|
+			  marker.lat restaurant.latitude
+			  marker.lng restaurant.longitude
+		end
 	end
 
 	def show
 		@restaurant = Restaurant.find(params[:id])
 		@address = @restaurant.address.split(' ').join('+').to_str
-		@map_url = "http://maps.googleapis.com/maps/api/staticmap?&markers=color:blue|#{@address}&zoom=13&size=600x300&sensor=false&key=AIzaSyA0vhNQ5sapyK1I7QE-iKn55eQ3J6rJluo"
+		@map_url = "http://maps.googleapis.com/maps/api/staticmap?&markers=color:blue|#{@address}&zoom=15&size=600x300&sensor=false&key=AIzaSyA0vhNQ5sapyK1I7QE-iKn55eQ3J6rJluo"
 		@reservation = @restaurant.reservations.new
 
 		

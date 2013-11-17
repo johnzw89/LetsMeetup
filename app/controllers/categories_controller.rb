@@ -1,6 +1,8 @@
 class CategoriesController < ApplicationController
   # GET /categories
   # GET /categories.json
+  before_filter :authenticate_owner!, except: [:index, :show] 
+
   def index
     @categories = Category.where("name like ?", "%#{params[:q]}%")
 

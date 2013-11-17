@@ -10,5 +10,4 @@ class OwnersController < ApplicationController
 		@restaurants = @owner.restaurants
 		@reservations = @owner.reservations
 	end
-
 end
