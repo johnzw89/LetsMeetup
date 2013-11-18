@@ -15,8 +15,8 @@
 </script>
 
 <div class = "category-search-box">
+	<strong><p>Search By Category</p></strong>
 	<%= form_tag restaurants_path, method: "get", id: "restaurant-search" do %>
-	  <p><%= label_tag(:search, "Search by category tags:") %></p>
 	  <p><%= text_field_tag :search, params[:search] %></p>
 	  <%= submit_tag("Search", class: "btn btn-primary") %>
 	  <% if owner_signed_in? %>

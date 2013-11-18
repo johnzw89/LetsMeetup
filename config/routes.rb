@@ -2,12 +2,12 @@ Reservester::Application.routes.draw do
 
   resources :categories
 
-
   root :to => 'restaurants#index'
   resources :reservations
   devise_for :owners
 
   get 'owners/:id/dashboard', to:'owners#dashboard', as: :dashboard
+  get 'about', to: 'static_pages#about'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
