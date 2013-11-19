@@ -2,7 +2,7 @@ class RestaurantsController < ApplicationController
 	before_filter :authenticate_owner!, except: [:index, :show]
 
 	def index
-		# @restaurant = Restaurant.all
+		# @restaurants = Restaurant.all
 		@restaurant = Restaurant.search(params[:search])
 		@hash = Gmaps4rails.build_markers(Restaurant.all) do |restaurant, marker|
 			  marker.lat restaurant.latitude

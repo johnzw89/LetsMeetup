@@ -21,7 +21,7 @@
 
 $(function () {
 	$('#restaurant_category_tokens').tokenInput('/categories.json', { crossDomain: false,
-	prePopulate: $('#book_author_tokens').data('pre'), preventDuplicates: true,
+	prePopulate: $('#restaurant_category_tokens').data('pre'), preventDuplicates: true,
 	theme: 'facebook', 
 	});
 

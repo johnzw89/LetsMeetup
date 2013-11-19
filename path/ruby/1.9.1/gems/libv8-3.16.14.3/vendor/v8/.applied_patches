@@ -1,0 +1,4 @@
+/Users/johnzw89/Dropbox/Rails_Proj/SINY_HWK/JohnWei_ReservesterF13/path/ruby/1.9.1/gems/libv8-3.16.14.3/patches/disable-building-tests.patch
+/Users/johnzw89/Dropbox/Rails_Proj/SINY_HWK/JohnWei_ReservesterF13/path/ruby/1.9.1/gems/libv8-3.16.14.3/patches/do-not-imply-vfp3-and-armv7.patch
+/Users/johnzw89/Dropbox/Rails_Proj/SINY_HWK/JohnWei_ReservesterF13/path/ruby/1.9.1/gems/libv8-3.16.14.3/patches/fPIC-for-static.patch
+/Users/johnzw89/Dropbox/Rails_Proj/SINY_HWK/JohnWei_ReservesterF13/path/ruby/1.9.1/gems/libv8-3.16.14.3/patches/gcc48-wno-unused-local-typedefs.patch

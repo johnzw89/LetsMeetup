@@ -34,6 +34,7 @@ class Restaurant < ActiveRecord::Base
   def self.search(search)
     if search
       includes(:categories).where('categories.name LIKE ?', "%#{search}%")
+      # lower(categories.name) like ... search.downcase
     else
       find(:all)
     end
