@@ -21,4 +21,12 @@ class Owner < ActiveRecord::Base
     end
   end
 
+  def user?
+    if self.role == "user"
+      true
+    else
+      false
+    end
+  end
+
 end

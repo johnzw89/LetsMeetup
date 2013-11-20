@@ -8,6 +8,7 @@ Reservester::Application.routes.draw do
   devise_for :owners
 
   get 'owners/:id/dashboard', to:'owners#dashboard', as: :dashboard
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
