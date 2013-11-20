@@ -18,7 +18,6 @@
 	<%= form_tag restaurants_path, method: "get", id: "restaurant-search" do %>
 	<strong><p>Search by Category</p></strong>
 	<p><%= text_field_tag :search, params[:search] %></p>
-
 	  <%= submit_tag("Search", class: "btn btn-primary") %>
 	  <% if owner_signed_in? %>
 		<%= link_to "New Restaurant", new_owner_restaurant_path(current_owner), class: "btn" %>

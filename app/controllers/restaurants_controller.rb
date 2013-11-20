@@ -60,8 +60,4 @@ class RestaurantsController < ApplicationController
 		@restaurant.destroy
 		redirect_to root_path
 	end
-
-	def about
-	end
-
 end
