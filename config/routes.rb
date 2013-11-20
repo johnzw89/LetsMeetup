@@ -1,5 +1,8 @@
 Reservester::Application.routes.draw do
 
+  resources :stars
+
+
   resources :categories
 
   root :to => 'restaurants#index'

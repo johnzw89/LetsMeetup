@@ -19,11 +19,11 @@
 		<% end %>
 	</div>
 	<div class = "span2">
-		<h5>Make a Reservation</h5>
+		<h5>Suggest Meeting Here!</h5>
 		<%= render 'reservation_form' %>
 	</div>
 	<div class = "span8">
-		<p>The owner is <%= @restaurant.owner.name.capitalize %></p>
+		<p><i>Posted by <%= @restaurant.owner.name.downcase.capitalize %></i></p>
 		<strong>Description: </strong>
 		<p><%= @restaurant.description %></p>
 		<strong>Address: </strong>
