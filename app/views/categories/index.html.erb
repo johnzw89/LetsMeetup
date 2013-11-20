@@ -4,7 +4,7 @@
   <tr>
     <th>Name</th>
     <th>Number of Places</th>
-    <% if signed_in? %>
+    <% if current_owner.try(:admin?) %>
       <th>Actions</th>
     <% end %>
   </tr>
@@ -13,7 +13,7 @@
   <tr>
     <td><span class= "label" ><%= category.name %></span></td>
     <td><%= category.restaurants.count %></td>
-    <% if signed_in? %>
+    <% if current_owner.try(:admin?) %>
       <td>
         <%= link_to 'Show', category %>
         <%= link_to 'Edit', edit_category_path(category) %>

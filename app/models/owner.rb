@@ -14,7 +14,7 @@ class Owner < ActiveRecord::Base
   has_many :reservations, through: :restaurants
 
   def admin?
-    if :role == "admin"
+    if self.role == "admin"
       true
     else
       false
