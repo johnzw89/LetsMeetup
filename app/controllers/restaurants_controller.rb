@@ -73,4 +73,8 @@ class RestaurantsController < ApplicationController
 		end
 	end
 
+	#def pocketed?(restaurant)
+	#	back_pockets.where(owner_id: current_user.id, restaurant_id: restaurant.id)
+	#end
+
 end

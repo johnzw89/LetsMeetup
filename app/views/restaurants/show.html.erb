@@ -23,8 +23,11 @@
 		<%= render 'reservation_form' %>
 		
 		<% if signed_in? %>
-			<%= link_to "Pocket for later", restaurant_back_pocket_path(@restaurant, type: "add"), method: :put, class: "btn" %>
-			<%= link_to "Drop from Pocket", restaurant_back_pocket_path(@restaurant, type: "drop"), method: :put, class: "btn" %>
+			<% if BackPocket.where( owner_id: current_owner.id, restaurant_id: @restaurant.id).present? %>
+				<%= link_to "Drop from Pocket", restaurant_back_pocket_path(@restaurant, type: "drop"), method: :put, class: "btn" %>
+			<% else %>
+				<%= link_to "Pocket for later", restaurant_back_pocket_path(@restaurant, type: "add"), method: :put, class: "btn" %>
+			<% end %>
 		<% end %>
 
 	</div>
