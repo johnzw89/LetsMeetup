@@ -1,12 +1,8 @@
 Reservester::Application.routes.draw do
 
-  resources :stars
-
-
-  resources :categories
-
   root :to => 'restaurants#index'
   resources :reservations
+  resources :categories
   devise_for :owners
 
   get 'owners/:id/dashboard', to:'owners#dashboard', as: :dashboard
@@ -21,6 +17,10 @@ Reservester::Application.routes.draw do
 
   resources :restaurants do
     resources :reservations
+  end
+
+  resources :restaurants do
+    put :back_pocket
   end
 
   # Sample of regular route:

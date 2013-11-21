@@ -11,7 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131120213235) do
+ActiveRecord::Schema.define(:version => 20131121013344) do
+
+  create_table "back_pockets", :force => true do |t|
+    t.integer  "restaurant_id"
+    t.integer  "owner_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -72,13 +79,6 @@ ActiveRecord::Schema.define(:version => 20131120213235) do
     t.float    "longitude"
     t.float    "latitude"
     t.boolean  "gmaps"
-  end
-
-  create_table "stars", :force => true do |t|
-    t.integer  "restaurants_id"
-    t.integer  "owners_id"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
   end
 
 end

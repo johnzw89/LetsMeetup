@@ -21,6 +21,12 @@
 	<div class = "span2">
 		<h5>Suggest Meeting Here!</h5>
 		<%= render 'reservation_form' %>
+		
+		<% if signed_in? %>
+			<%= link_to "Pocket for later", restaurant_back_pocket_path(@restaurant, type: "add"), method: :put, class: "btn" %>
+			<%= link_to "Drop from Pocket", restaurant_back_pocket_path(@restaurant, type: "drop"), method: :put, class: "btn" %>
+		<% end %>
+
 	</div>
 	<div class = "span8">
 		<p><i>Posted by <%= @restaurant.owner.name.downcase.capitalize %></i></p>

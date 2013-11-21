@@ -13,6 +13,9 @@ class Owner < ActiveRecord::Base
   has_many :restaurants
   has_many :reservations, through: :restaurants
 
+  has_many :back_pockets
+  has_many :back_pocket_restaurants, through: :back_pockets, source: :restaurant
+
   def admin?
     if self.role == "admin"
       true

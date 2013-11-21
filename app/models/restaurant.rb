@@ -16,6 +16,9 @@ class Restaurant < ActiveRecord::Base
   has_many :categorizations
   has_many :categories, through: :categorizations
 
+  has_many :back_pockets
+  has_many :back_pocketed_by, through: :back_pockets, source: :owner
+
   # this attr_reader is the getter method for the category_tokens setter method below.
   attr_reader :category_tokens
 
